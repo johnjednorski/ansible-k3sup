@@ -6,7 +6,7 @@
       - k3sup
       - install
       - --ip
-      - "{{hostvars[item].ansible_facts.eth0.ipv4.address}}"
+      - "{{hostvars[item].ansible_facts.default_ipv4.address}}"
       - --ssh-key
       - "{{ssh_key}}"
       - --user
@@ -25,7 +25,7 @@
 
 - name: Check API availability of master servers
   uri:
-    url: "https://{{hostvars[item].ansible_facts.eth0.ipv4.address}}:6443"
+    url: "https://{{hostvars[item].ansible_facts.default_ipv4.address}}:6443"
     method: GET
     validate_certs: False
     status_code: 401

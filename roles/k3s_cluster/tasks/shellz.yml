@@ -8,7 +8,7 @@
   replace:
     path: "{{playbook_dir}}/kubeconfig"
     regexp: '^(.*https://){1}(127.0.0.1|localhost){1}(:6443.*){1}$'
-    replace: '\g<1>{{hostvars[item].ansible_facts.eth0.ipv4.address}}\g<3>'
+    replace: '\g<1>{{hostvars[groups.master.0].ansible_facts.default_ipv4.address}}\g<3>'
   with_items: "{{ groups.master.0 }}"
   when: kubeconfig_details.stat.exists and kubeconfig_details.stat.isreg
   register: config_changed

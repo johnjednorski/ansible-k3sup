@@ -7,6 +7,7 @@
   notify: Reboot
 
 - name: Configuring /etc/hosts
+  when: "ansible_lsb.id == 'Raspbian'"
   become: True
   template:
     src: hosts.j2
@@ -14,6 +15,7 @@
   notify: Reboot
 
 - name: Configuring /etc/dhcpcd.conf
+  when: "ansible_lsb.id == 'Raspbian'"
   become: True
   template:
     src: dhcpcd.conf.j2

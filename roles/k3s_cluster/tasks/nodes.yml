@@ -6,9 +6,9 @@
       - k3sup
       - join
       - --server-ip
-      - "{{hostvars[groups.master.0].ansible_facts.eth0.ipv4.address}}"
+      - "{{hostvars[groups.master.0].ansible_facts.default_ipv4.address}}"
       - --ip
-      - "{{hostvars[item].ansible_default_ipv4.address}}"
+      - "{{hostvars[item].ansible_facts.default_ipv4.address}}"
       - --ssh-key
       - "{{ssh_key}}"
       - --user

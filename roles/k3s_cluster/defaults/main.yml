@@ -1,10 +1,10 @@
 ---
-k3s_version: 'v0.8.1'
+k3s_version: "v1.21.0+k3s1"
 debug_master: False
 debug_nodes: False
 
 kubeconfigure: True
-kube_homedir: '.kube'
-kube_config: 'config'
-kube_envin2: '.bash_aliases'
-ssh_key: '~/.ssh/id_rsa'
+kube_homedir: ".kube"
+kube_config: "config"
+kube_envin2: ".bash_aliases"
+ssh_key: "~/.ssh/id_rsa"
