@@ -1,6 +1,6 @@
 # ansible-k3: Kubernetes Lighweight Cluster with Ansible automation
 
-This playbook sets up a k3s cluster on Raspberry Pi boards.
+This playbook sets up a k3s cluster on Mini PCs.
 
 Credits and many thanks to
 - [Rancher](https://rancher.com/) the creators of [k3s](https://k3s.io),
